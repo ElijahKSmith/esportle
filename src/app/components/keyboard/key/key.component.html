@@ -1,0 +1,33 @@
+<ng-container [ngSwitch]="type">
+  <button
+    *ngSwitchCase="'letter'"
+    class="key-box"
+    fxLayout="row"
+    fxLayoutAlign="center center"
+    mat-button
+    [ngClass]="keyClass"
+    (click)="onClick.emit({ code: 'Key' + letter })"
+  >
+    <div class="key">{{ letter }}</div>
+  </button>
+  <button
+    *ngSwitchCase="'enter'"
+    class="action-box unknown-key"
+    fxLayout="row"
+    fxLayoutAlign="center center"
+    mat-button
+    (click)="onClick.emit({ code: 'Enter' })"
+  >
+    <div class="key"><mat-icon>keyboard_return</mat-icon></div>
+  </button>
+  <button
+    *ngSwitchCase="'backspace'"
+    class="action-box unknown-key"
+    fxLayout="row"
+    fxLayoutAlign="center center"
+    mat-button
+    (click)="onClick.emit({ code: 'Backspace' })"
+  >
+    <div class="key"><mat-icon>backspace</mat-icon></div>
+  </button>
+</ng-container>

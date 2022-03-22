@@ -1,16 +1,36 @@
-import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
+import { BoardModule } from './components/board/board.module';
+import { DailyComponent } from './components/daily/daily.component';
+import { DialogModule } from './components/dialog/dialog.module';
+import { HeaderComponent } from './components/header/header.component';
+import { KeyboardModule } from './components/keyboard/keyboard.module';
+import { WordService } from './services/word.service';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [DailyComponent, HeaderComponent],
   imports: [
-    BrowserModule
+    BoardModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    DialogModule,
+    FlexLayoutModule,
+    KeyboardModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatIconModule,
+    MatSnackBarModule,
+    MatToolbarModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [WordService],
+  bootstrap: [DailyComponent, HeaderComponent],
 })
-export class AppModule { }
+export class AppModule {}

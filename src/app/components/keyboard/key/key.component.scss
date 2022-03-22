@@ -1,0 +1,42 @@
+:host ::ng-deep .mat-button {
+  line-height: inherit;
+  min-width: 0;
+  padding: 0;
+}
+
+@mixin key-default {
+  border-radius: 4px;
+  height: 50px;
+}
+
+.key-box {
+  @include key-default;
+  width: 40px;
+}
+
+.action-box {
+  @include key-default;
+  width: 60px;
+}
+
+.key {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.correct-key {
+  background-color: #538d4e;
+}
+
+.move-key {
+  background-color: #b59f3b;
+}
+
+.wrong-key {
+  background-color: #3a3a3c;
+}
+
+.unknown-key {
+  background-color: #818384;
+}

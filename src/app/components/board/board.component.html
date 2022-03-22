@@ -1,0 +1,7 @@
+<div class="board" fxLayout="column" fxLayoutGap="5px">
+  <app-word
+    *ngFor="let value of state"
+    [word]="value.word"
+    [evaluations]="value.evaluations"
+  ></app-word>
+</div>

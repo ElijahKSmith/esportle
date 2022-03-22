@@ -1,0 +1,7 @@
+<div class="word" fxLayout="row" fxLayoutGap="5px">
+  <app-letter
+    *ngFor="let letter of letters; index as i"
+    [letter]="letter"
+    [type]="evaluations[i]"
+  ></app-letter>
+</div>
